@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { RouletteService } from './shared/roulette.service';
+import { ColorDirective } from './directives/color.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ColorDirective
   ],
   imports: [
     BrowserModule

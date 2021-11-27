@@ -1,0 +1,23 @@
+.number-item {
+  width: 70px;
+  height: 70px;
+  color: white;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  background: red;
+}
+
+.black {
+  background: black;
+}
+
+.zero {
+  background: green;
+}
+
+

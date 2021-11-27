@@ -5,4 +5,10 @@
     <button class="btn btn-danger col-1 mr-3" (click)="onStop()">Stop</button>
     <button class="btn btn-secondary col-1" (click)="onReset()">Reset</button>
   </div>
+
+  <hr/>
+
+  <div class="row">
+    <div class="p-2 m-1 number-item" *ngFor="let number of numbers" appColor="{{ number }}">{{ number }}</div>
+  </div>
 </div>
