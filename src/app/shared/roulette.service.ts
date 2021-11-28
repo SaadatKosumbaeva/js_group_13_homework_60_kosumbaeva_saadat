@@ -2,7 +2,7 @@ import { EventEmitter } from '@angular/core';
 
 export class RouletteService {
   newNumber = new EventEmitter<number>();
-
+  newColor = new EventEmitter<string>();
   interval!: number;
 
   generateNumber() {
@@ -10,14 +10,18 @@ export class RouletteService {
   }
 
   start() {
+    if (this.interval) return;
     this.interval = setInterval(() => {
       const number = this.generateNumber();
+      const color = this.getColor(number);
       this.newNumber.emit(number);
-    }, 1000)
+      this.newColor.emit(color);
+    }, 1000);
   }
 
   stop() {
     clearInterval(this.interval);
+    this.interval = 0;
   }
 
   getColor(number: number) {
